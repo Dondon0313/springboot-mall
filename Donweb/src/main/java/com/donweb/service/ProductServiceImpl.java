@@ -1,6 +1,7 @@
 package com.donweb.service;
 
 import com.donweb.dao.ProductDao;
+import com.donweb.dto.ProductRequest;
 import com.donweb.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,4 +18,8 @@ public class ProductServiceImpl implements ProductService{
         return productDao.getProductById(productId);
     }
 
+    @Override
+    public Integer createProduct(ProductRequest productRequest) {
+        return productDao.createProduct(productRequest);
+    }
 }
